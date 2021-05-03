@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\BatimentController;
+use App\Http\Controllers\EleveController;
+use App\Http\Controllers\FormationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +24,10 @@ Route::get('/batiment', [BatimentController::class,'index']);
 
 Route::post("/batiment/{id}/delete", [BatimentController::class, "destroy"]);
 
-Route::get('/formation', [BatimentController::class,'index']);
+Route::get('/formation', [FormationController::class,'index']);
 
-Route::post("/formation/{id}/delete", [BatimentController::class, "destroy"]);
+Route::post("/formation/{id}/delete", [FormationController::class, "destroy"]);
+
+Route::get('/eleve', [EleveController::class,'index']);
+
+Route::post("/eleve/{id}/delete", [EleveController::class, "destroy"]);

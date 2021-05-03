@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Batiment;
+use App\Models\Eleve;
 use App\Models\Formation;
 use Illuminate\Database\Seeder;
 
@@ -17,5 +18,6 @@ class DatabaseSeeder extends Seeder
     {
         Batiment::factory(25)->create();
         Formation::factory(25)->create();
+        Eleve::factory(25)->create();
     }
 }

@@ -15,22 +15,24 @@
               <tr>
                 <th scope="col">#</th>
                 <th scope="col">Nom</th>
-                <th scope="col">Nombre de personnes</th>
-                <th scope="col">Nombre de personnes hors condition</th>
-                <th scope="col">description</th>
+                <th scope="col">prenom</th>
+                <th scope="col">age</th>
+                <th scope="col">date de naissance</th>
+                <th scope="col">belge ou pas</th>
                 <th scope="col">Action</th>
               </tr>
             </thead>
             <tbody>
-                @foreach ($formations as $formation)
+                @foreach ($eleves as $eleve)
                     <tr>
-                        <th scope="row">{{ $formation->id }}</th>
-                        <td>{{ $formation->nom }}</td>
-                        <td>{{ $formation->NombreDePersonnes }}</td>
-                        <td>{{ $formation->NombreDePersonnesHorsCondition }}</td>
-                        <td>{{ $formation->description }}</td>
+                        <th scope="row">{{ $eleve->id }}</th>
+                        <td>{{ $eleve->nom }}</td>
+                        <td>{{ $eleve->prenom }}</td>
+                        <td>{{ $eleve->age }}</td>
+                        <td>{{ $eleve->ddn }}</td>
+                        <td>{{ $eleve->Belge }}</td>
                         <td>
-                            <form action="/formation/{{ $formation->id }}/delete" method="POST">
+                            <form action="/eleve/{{ $eleve->id }}/delete" method="POST">
                                 @csrf
                                 <button class="btn btn-danger text-white" type="submit">Delete</button>
                             </form>
